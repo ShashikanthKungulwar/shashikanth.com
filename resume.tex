@@ -1,0 +1,238 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{mathptmx}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% \titleformat{\section}{
+%   \vspace{-4pt}\scshape\raggedright\large
+% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={\textbullet}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% =====================================================================
+% MASTER RESUME — NOT page-limited. This is the full database.
+% Every one-page company/placement resume is derived as a SUBSET of
+% this file (cut sections/bullets, do not rewrite facts).
+%
+% OPEN PLACEHOLDERS:
+%   - Thesis: benchmark + baseline number, method + delta
+%   - Text-to-SQL: personal contribution (3-author team)
+%   - MPI Stencil Solver: personal contribution (5-member team)
+%   - RescueSeg: confirm member count (5 vs 7) and origin
+%   - RESOLVED: portfolio link is live below; site now mirrors this
+%     master (CPI 8.95, all sections) and hosts this resume.pdf
+% =====================================================================
+\begin{center}
+    \textbf{\Huge \scshape Kungulwar Shashikanth} \\ \vspace{3pt}
+    \small
+    \faEnvelope\ \href{mailto:shashikanth25@iitk.ac.in}{\underline{shashikanth25@iitk.ac.in}} $|$
+    \faEnvelope\ \href{mailto:shashikanthk80@gmail.com}{\underline{shashikanthk80@gmail.com}} $|$
+    \faPhone*\ +91-9110733662 \\ \vspace{2pt}
+    \faMapMarker*\ Kanpur, India $|$
+    \faGlobe\ \href{https://shashikanthkungulwar.github.io/shashikanth.com/}{\underline{Portfolio}} $|$
+    \faLinkedin\ \href{https://linkedin.com/in/shashikanth-kungulwar-8abb53368/}{\underline{LinkedIn}} $|$
+    \faGithub\ \href{https://github.com/ShashikanthKungulwar}{\underline{GitHub}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Kanpur (IITK)}{Kanpur, India}
+      {M.Tech, Computer Science and Engineering $|$ CPI 8.95/10}{2025 -- Present}
+    \resumeSubheading
+      {Vardhaman College of Engineering}{Hyderabad, India}
+      {B.Tech, Computer Science and Engineering $|$ CGPA 8.8/10}{2020 -- 2024}
+    \resumeSubheading
+      {Sri Chaitanya Junior College}{Hyderabad, India}
+      {Intermediate (Class XII) $|$ 948/1000}{2018 -- 2020}
+    \resumeSubheading
+      {SRK High School}{Siddipet, India}
+      {Class X (SSC) $|$ GPA 9.0/10}{2018}
+  \resumeSubHeadingListEnd
+
+\section{Relevant Coursework}
+  \vspace{-5pt}
+  \begin{multicols}{3}
+    \begin{itemize}[leftmargin=0.2in, label={\textbullet}]
+      \small
+      \item Design \& Analysis of Algorithms
+      \item Intro to Machine Learning
+      \item Deep Learning for Comp Vision
+      \item Generative Artificial Intelligence
+      \item Parallel Computing
+      \item Algorithmic Information Theory
+    \end{itemize}
+  \end{multicols}
+  \vspace{-10pt}
+
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Kanpur (IITK)}{Kanpur, India}
+      {M.Tech Thesis $|$ Advisor: Prof. Arnab Bhattacharya}{May 2026 -- Present}
+    \resumeProjectHeading
+      {\textit{\textbf{Ambiguity in Coreference Resolution for Large Language Models}}}{}
+      \resumeItemListStart
+        \resumeItem{Developing a \textbf{Hindi-language benchmark} containing ambiguous, non-ambiguous, and cue-dependent coreference instances to evaluate LLM reasoning over discourse context.}
+        \resumeItem{Designed a \textbf{multiple-choice evaluation framework} to measure LLM ability to resolve ambiguous references using contextual information, coreference chains, and discourse cues.}
+        \resumeItem{Evaluating how \textbf{explicit coreference and discourse information} affects LLM accuracy in resolving ambiguous references across varying contextual conditions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, C++, SQL, JavaScript, Java, Kotlin} \\
+     \textbf{Machine Learning}{: PyTorch, Hugging Face Transformers, TensorFlow Lite, ONNX Runtime, SentenceTransformers, NumPy, Pandas; quantization, ablation studies, active learning} \\
+     \textbf{LLM Systems}{: Retrieval-Augmented Generation (RAG), Prompt Engineering, Structured-output validation, Ollama, Groq} \\
+     \textbf{Parallel \& HPC}{: MPI (non-blocking communication, derived datatypes), SLURM, scaling analysis, performance benchmarking} \\
+     \textbf{Backend}{: FastAPI, Node.js, Express, REST APIs, JWT (refresh-token rotation), OAuth 2.0, rate limiting, input sanitization} \\
+     \textbf{Frontend / Mobile}{: React, Vite, React Native (CLI), Redux Toolkit, Monaco, Material Design 3, HTML, CSS3} \\
+     \textbf{Databases / Storage}{: MongoDB (Mongoose), MySQL, SQLite, Redis, Firebase Firestore, MMKV} \\
+     \textbf{DevOps \& Tools}{: Docker, Docker Compose, nginx, Git, GitHub, Postman, Vercel, Render, Gradio, Hugging Face Hub}
+    }}
+ \end{itemize}
+
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{SmartSMS: On-Device SMS Manager (Android)} $\vert$ \emph{Self Project $\vert$ Kotlin, TFLite, Node.js}}{}
+          \resumeItemListStart
+            \resumeItem{Fine-tuned DistilBERT for 6-class SMS classification, deployed on-device via TFLite with a custom Kotlin WordPiece tokenizer: \textbf{100\% OTP recall}, no user data leaving the device.}
+            \resumeItem{Benchmarked DistilBERT against MobileBERT; ablation showed removing hard negatives dropped adversarial accuracy from \textbf{100\% to $\sim$47\%}.}
+            \resumeItem{Diagnosed INT8 quantization accuracy loss and shipped FP32 after evaluation; built an active-learning pipeline for continuous retraining.}
+            \resumeItem{Built the Node.js/Express backend: JWT with refresh-token rotation, Google OAuth, multi-device sync, Docker Compose, rate limiting and input sanitization.}
+            \resumeItem{Developed the React Native (CLI) Android app with custom Kotlin native modules, MMKV storage, WorkManager background processing, and default-SMS-role support.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{CodeSense AI: Local-First Code Review Assistant} $\vert$ \emph{Self Project $\vert$ FastAPI, Qwen2.5-Coder, Ollama}}{}
+          \resumeItemListStart
+            \resumeItem{Built a code review tool running inference against a local LLM (\texttt{qwen2.5-coder:7b} via Ollama), exposing style review, complexity analysis, and edge-case generation over FastAPI with a React/Vite/Monaco frontend, SQLite persistence, and Docker Compose.}
+            \resumeItem{Designed a swappable provider abstraction so adding a cloud backend (Groq) required one new file and one factory entry --- no change to routes, services, schemas, or frontend; enforced the boundary with an architectural fitness test that fails the build if \texttt{httpx} is imported outside \texttt{providers/}.}
+            \resumeItem{Hardened structured LLM output: mandatory-evidence response schemas, a validator that drops self-refuting claims, JSON parse-and-retry, and temperature pinned at 0.1 after default sampling produced scores of 89/70/30 on identical input.}
+            \resumeItem{Benchmarked latency across models and deployments: \textbf{2.2--6.3 s} local (RTX 5060, n=3/cell) versus \textbf{0.7--1.9 s} server-side on Groq, separating network from inference; documented that a 7B model self-contradicted to O($n^2$) on \texttt{sum(range(n))} while a 120B model was correct on all 5 runs with zero JSON retries.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{RescueSeg: Hybrid-Attention Transformer for Damage Segmentation} $\vert$ \emph{Team Project $\vert$ PyTorch}}{}
+          \resumeItemListStart
+            \resumeItem{Co-developed a hybrid encoder combining Overlapping Cross Attention and Global Sparse Attention through a learnable fusion gate, with FPN, Attention U-Net decoder, and boundary refinement.}
+            \resumeItem{Achieved \textbf{77.35\% mIoU} at \textbf{44 ms} inference on RescueNet (11 classes), outperforming a Segmenter baseline under identical settings.}
+            \resumeItem{Ran a 3-variant ablation showing boundary refinement and auxiliary supervision prevent NaN divergence (epochs 14--20), improving optimization stability.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Music Genre Classification from Audio Spectrograms} $\vert$ \emph{Course Assignment, CS776 --- 7 members $\vert$ Python, PyTorch}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented CNN primitives from scratch instead of built-in layers: 2D convolution via \texttt{unfold} sliding windows and an \texttt{einsum} contraction, plus max pooling, channel normalization, and the classifier head.}
+            \resumeItem{Built a ResNet-v2 pre-activation bottleneck network (\textbf{380,920 parameters}) over 3-channel inputs stacking log-mel spectrogram, MFCC, and chroma features per clip.}
+            \resumeItem{Scored \textbf{0.92993 macro F1} on the competition leaderboard across \textbf{16 classes} (14,550 held-out test samples); validation macro F1 differed by only 0.0002.}
+            \resumeItem{Owned training methodology: optimizer comparison (SGD / AdamW / Adam), batch-size generalization analysis, \textbf{OneCycleLR} scheduling, label smoothing, early stopping.}
+            \resumeItem{Ran ablations on input representation, resolution ($124{\times}92 \rightarrow 248{\times}184$), and per-feature normalization.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Text-to-SQL via Dynamic Few-Shot Prompting} $\vert$ \emph{Course Project, 3 members $\vert$ LLMs, RAG, SentenceTransformers}}{}
+          \resumeItemListStart
+            \resumeItem{Advised by Prof. Arnab Bhattacharya and Prof. Subhajit Roy. Built a \textbf{retrieval-augmented} pipeline that embeds each question with a SentenceTransformer (all-MiniLM-L6-v2) and retrieves the top-K most cosine-similar solved examples from a held-out knowledge base to construct the prompt.}
+            \resumeItem{Ran a controlled comparison of four prompting strategies across two models (Gemini 2.5 Flash, Llama 3.1 8B) and two benchmarks (Spider, BIRD), evaluated by execution accuracy on a 200-sample subset per dataset.}
+            \resumeItem{Raised Gemini execution accuracy on \textbf{BIRD from 33.0\% to 52.5\%} and on \textbf{Spider from 61.0\% to 74.5\%} over the zero-shot baseline; Llama improved from 8.0\% to 32.5\% on BIRD.}
+            \resumeItem{Swept retrieval depth $K = 1$--$5$, finding gains saturate near $K = 3$--$4$ and attributing the ceiling to context saturation and BIRD's implicit foreign keys and non-standard column naming.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Distributed 3D Stencil Solver with MPI Halo Exchange} $\vert$ \emph{Course Assignment, CS633 --- 5 members $\vert$ C, MPI, HPC}}{}
+          \resumeItemListStart
+            \resumeItem{Built a distributed $d$-point stencil solver over a $p_x \times p_y \times p_z$ Cartesian process grid with six-neighbour ghost-cell halo exchange.}
+            \resumeItem{Eliminated pack/unpack overhead by communicating non-contiguous halo faces through MPI derived datatypes.}
+            \resumeItem{Overlapped communication with computation via non-blocking sends/receives, computing interior points during message transit; replaced array copies with pointer swapping.}
+            \resumeItem{Benchmarked on \textbf{PARAM Rudra} across \textbf{32--96 processes}, measuring a consistent \textbf{1.17--1.20$\times$ speedup at $240^3$} with communication overhead limiting gains at smaller sizes.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Animerch: E-Commerce Web Application} $\vert$ \emph{Self Project $\vert$ React, Redux Toolkit}}{}
+          \resumeItemListStart
+            \resumeItem{Built an e-commerce storefront with cart, product listing, and Redux Toolkit state management. \textit{(Full-Stack derivative only.)}}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+% =====================================================================
+% ARCHIVE — NOT for any derived resume. Kept for record only.
+%   - Pneumonia Classifier (chest X-ray CNN, 11,486 params) — saturated
+%     dataset, overlaps RescueSeg; interview talking point only.
+%   - Media Transcription Tool (MERN + Whisper API wrapper) — no
+%     pipeline engineering beyond the API call.
+%   - Music Transformer notebook — guided course exercise.
+%   - Anitact, Classic Pong, iPod Interface, Photo Pholio, TO-DO List —
+%     tutorial-tier, pre-M.Tech.
+%   - Rejold EdTech fellowship (2021-2022, HTML/CSS site) — removed by
+%     user decision; no Experience section in this Master.
+% =====================================================================
+
+\end{document}
