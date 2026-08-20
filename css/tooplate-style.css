@@ -191,7 +191,7 @@ b, strong {
   font-weight: bold;
 }
 
-.navbar-expand-sm .navbar-nav .nav-link {
+.navbar-expand-lg .navbar-nav .nav-link {
   padding: 0 20px;
 }
 
@@ -494,6 +494,21 @@ b, strong {
   .contact-info {
     padding: 0 2rem;
   }
+
+  /* navbar collapses below 992px now that it is navbar-expand-lg */
+  .navbar-collapse {
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .dark-mode .navbar-collapse {
+    background: #0c0c0d;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 3px 20px;
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -508,15 +523,6 @@ b, strong {
     font-size: 28px;
   }
 
-  .navbar-collapse {
-    background: #ffffff;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-  .navbar-expand-sm .navbar-nav .nav-link {
-    padding: 3px 20px;
-  }
 }
 @media (max-width: 580px) {
 	.animated-info {
@@ -682,23 +688,50 @@ b, strong {
 }
 
 /* --- skills --- */
-.skill-group {
-  margin-bottom: 1.75rem;
+.skill-lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.skill-group h4 {
-  font-size: 17px;
+.skill-lines li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #5b5b5b;
+  padding: 12px 0;
+  border-bottom: 1px solid #ececef;
+}
+
+.skill-lines li:last-child {
+  border-bottom: 0;
+}
+
+/* stacked on mobile the two skill columns read as one list, so the first
+   column keeps its closing divider to avoid a gap in the run */
+@media (max-width: 991px) {
+  .skill-col:not(:last-child) .skill-lines li:last-child {
+    border-bottom: 1px solid #ececef;
+  }
+
+  .dark-mode .skill-col:not(:last-child) .skill-lines li:last-child {
+    border-bottom-color: #2a2a30;
+  }
+}
+
+.skill-label {
+  font-weight: bold;
   color: #474559;
-  margin-bottom: 12px;
+  margin-right: 4px;
 }
 
-.skill-group h4 i {
+.dark-mode .skill-lines li {
+  color: #EEE9DD;
+  border-bottom-color: #2a2a30;
+}
+
+.dark-mode .skill-label {
   color: #ffc200;
-  margin-right: 8px;
-}
-
-.dark-mode .skill-group h4 {
-  color: #ffffff;
 }
 
 /* --- cards (research + projects) --- */
@@ -883,4 +916,128 @@ b, strong {
 /* keep section headings clear of the fixed navbar on hash links */
 #about, #education, #research, #skills, #projects, #contact {
   scroll-margin-top: 80px;
+}
+
+/* --- balance the Education column against Coursework + Research ---
+   The Bootstrap row already stretches both columns to equal height; the
+   timeline just did not fill its own column, leaving dead space at the
+   bottom left. Let the wrappers grow so the connecting line stretches
+   with them. The last wrapper keeps its natural height because its
+   connector is suppressed (.timeline-wrapper:last-child:before). */
+@media (min-width: 992px) {
+  .education-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education-col .timeline {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education-col .timeline-wrapper {
+    flex: 1 1 auto;
+  }
+
+  .education-col .timeline-wrapper:last-child {
+    flex: 0 0 auto;
+  }
+}
+
+/* --- responsive --- */
+@media (max-width: 991px) {
+  /* two columns of long course names get cramped on tablets */
+  .chip-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.75em;
+  }
+
+  .timeline-yr {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+  }
+
+  .timeline-yr span {
+    font-size: 14px;
+    line-height: 58px;
+  }
+
+  .timeline-info {
+    margin-left: 4.75em;
+    max-width: none;
+  }
+
+  .timeline-wrapper:before {
+    left: 29px;
+  }
+
+  .skill-lines li {
+    font-size: 15px;
+  }
+
+  /* stack contact details above the social icons instead of squeezing
+     them side by side */
+  .contact-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info .social-links {
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+  }
+
+  .contact-info .social-links li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-yr {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .timeline-yr span {
+    font-size: 13px;
+    line-height: 48px;
+  }
+
+  .timeline-info {
+    margin-left: 4em;
+  }
+
+  .timeline-wrapper:before {
+    left: 24px;
+  }
+
+  .info-card {
+    padding: 20px 16px;
+  }
+
+  .chip {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+}
+
+/* nothing on the page may push the body sideways */
+html, body {
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
 }
