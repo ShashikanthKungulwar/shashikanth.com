@@ -519,19 +519,21 @@ b, strong {
     font-size: 2em;
   }
 
+  /* keep each animated phrase on a single line on mobile */
+  .animated-info {
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+  }
+
   .animated-item {
-    font-size: 28px;
+    font-size: clamp(18px, 6.2vw, 28px);
+    white-space: nowrap;
+    overflow: visible;
   }
 
 }
 @media (max-width: 580px) {
-	.animated-info {
-		min-width: 200px;
-	}
-  .animated-item {
-    font-size: 30px;
-  }
-
   .custom-btn-group {
     text-align: center;
   }
